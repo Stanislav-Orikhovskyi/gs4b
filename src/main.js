@@ -12,10 +12,14 @@ import App from './App.vue'
 import '@/assets/styles/reset.css'
 import '@/assets/styles/main.css'
 
-// Composables
 import { createApp } from 'vue'
+import VueSplide from '@splidejs/vue-splide';
+
+import router from './routers/router';
 
 const app = createApp(App)
+app.use( VueSplide );
+app.use(router);
 
 registerPlugins(app)
 
